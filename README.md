@@ -90,3 +90,7 @@ Tests cover cross-user reads/search/deletion, missing credentials, ingestion bou
 
 - [Gemini API](https://ai.google.dev/api)
 - [YouTube transcript API](https://github.com/jdepoix/youtube-transcript-api)
+
+## Optional provider dependencies
+
+Local demo dependencies are in `requirements.txt`. Before enabling Claude, Gemini, Pinecone, Snowflake, semantic embeddings or YouTube, run `pip install -r requirements-providers.txt`. For CPU-only semantic embeddings on Linux, install PyTorch from its CPU wheel index first: `pip install torch --index-url https://download.pytorch.org/whl/cpu`. Docker builds include the local demo dependencies; add the provider installation to the Dockerfile when enabling remote providers.
